@@ -1,4 +1,5 @@
-// Inicializuoti kintamuosius DOM elementams
+import { atliktiSudetis, atliktiAtimtis } from './mathOperations.js';
+
 const ekranas = document.getElementById('display');
 const mygtukai = document.querySelectorAll('.btn');
 let pirmasSkaicius = '';
@@ -46,10 +47,10 @@ function atliktiSkaiciavima() {
 
     switch (veiksmas) {
         case '+':
-            rezultatas = pirmas + antras;
+            rezultatas = atliktiSudetis(pirmas, antras);
             break;
         case '-':
-            rezultatas = pirmas - antras;
+            rezultatas = atliktiAtimtis(pirmas, antras);
             break;
         default:
             return;        
