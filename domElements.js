@@ -14,7 +14,7 @@ export function mygtukuKlausytojai(mygtukai, apdorotiSkaiciu,
                 atliktiSkaiciavima();
             } else if (mygtukas.id === 'clear') {
                 isvalytiEkrana();
-            }
+            } 
         });
     });
 }
