@@ -1,27 +1,12 @@
 import { atliktiSudetis, atliktiAtimtis } from './mathOperations.js';
+import { ekranas, mygtukai, mygtukuKlausytojai } from './domElements.js';
 
-const ekranas = document.getElementById('display');
-const mygtukai = document.querySelectorAll('.btn');
 let pirmasSkaicius = '';
 let veiksmas = '';
 let antrasSkaicius = '';
 
-
-mygtukai.forEach(mygtukas => {
-    mygtukas.addEventListener('click', () => {
-        const reiksme = mygtukas.textContent;
-        if (mygtukas.classList.contains('number')) {
-            apdorotiSkaiciu(reiksme);
-        } else if (mygtukas.classList.contains('operator')) {
-            apdorotiVeiksma(reiksme);
-        } else if (mygtukas.id === 'equals') {
-            atliktiSkaiciavima();
-        } else if (mygtukas.id === 'clear') {
-            isvalytiEkrana();
-        }
-        
-    });
-});
+mygtukuKlausytojai(mygtukai, apdorotiSkaiciu, apdorotiVeiksma,
+    atliktiSkaiciavima, isvalytiEkrana);
 
 function apdorotiSkaiciu(skaicius) {
     if (veiksmas === '') {
