@@ -8,16 +8,17 @@ let antrasSkaicius = '';
 export function apdorotiSkaiciu(skaicius) {
     if (veiksmas === '') {
     pirmasSkaicius += skaicius;
-    atnaujintiEkrana(pirmasSkaicius);
+    atnaujintiEkrana(skaicius);
     } else {
         antrasSkaicius += skaicius;
-        atnaujintiEkrana(antrasSkaicius);
+        atnaujintiEkrana(skaicius);
     }
 }
 
 export function apdorotiVeiksma(veiksmai) {
     if (pirmasSkaicius === '') return;
-    veiksmas = veiksmai;
+  veiksmas = veiksmai;
+  atnaujintiEkrana(veiksmai);
 }
     
 export function atliktiSkaiciavima() {
@@ -53,7 +54,7 @@ export function isvalytiEkrana() {
     antrasSkaicius = '';
     atnaujintiEkrana('0');
 }
-=======
+
 export const printAge = (user) => {
   console.log(`User's is ${user.age} years old`);
 };
