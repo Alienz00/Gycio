@@ -1,3 +1,4 @@
+
 export const ekranas = document.getElementById('display');
 export const mygtukai = document.querySelectorAll('.btn');
 
