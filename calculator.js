@@ -53,3 +53,7 @@ export function isvalytiEkrana() {
     antrasSkaicius = '';
     atnaujintiEkrana('0');
 }
+=======
+export const printAge = (user) => {
+  console.log(`User's is ${user.age} years old`);
+};
