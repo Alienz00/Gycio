@@ -12,3 +12,5 @@ export const printName = (user) => {
 export const printAge = (user) => {
   console.log(`User's is ${user.age} years old`);
 };
+
+sukelti reikia skaičiuotuvo funkcijas
